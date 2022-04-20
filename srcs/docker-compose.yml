@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx
+    container_name: nginx_debian
+    depends_on:
+      - wordpress
+    build: ./requirements/nginx
+    ports:
+      - "443:443"
+    restart: always
+    networks:
+      - inception_network
+
+  wordpress:
+    image: wordpress
+    container_name: wordpress_debian
+    depends_on:
+      - mariadb
+    build: ./requirements/wordpress
+    restart: always
+    networks:
+      - inception_network
+
+  mariadb:
+    image: mariadb
+    container_name: mariadb_debian
+    build: ./requirements/mariadb
+    restart: always
+    networks:
+      - inception_network
+
+networks:
+  inception_network:
