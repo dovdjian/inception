@@ -12,6 +12,8 @@ services:
     restart: always
     networks:
       - inception_network
+    volumes:
+      - wordpress_volume:/var/www/wordpress
 
   wordpress:
     image: wordpress
@@ -22,6 +24,8 @@ services:
     restart: always
     networks:
       - inception_network
+    volumes:
+      - wordpress_volume:/var/www/wordpress
 
   mariadb:
     image: mariadb
@@ -33,3 +37,11 @@ services:
 
 networks:
   inception_network:
+
+volumes:
+  wordpress_volume:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/dodjian/data/wordpress_volume
