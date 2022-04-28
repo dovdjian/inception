@@ -34,6 +34,8 @@ services:
     restart: always
     networks:
       - inception_network
+    volumes:
+      - mariadb_volume:/var/lib/mysql
 
 networks:
   inception_network:
@@ -45,3 +47,9 @@ volumes:
       type: none
       o: bind
       device: /home/dodjian/data/wordpress_volume
+  mariadb_volume:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/dodjian/data/mariadb_volume
