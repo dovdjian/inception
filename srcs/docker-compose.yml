@@ -26,6 +26,8 @@ services:
       - inception_network
     volumes:
       - wordpress_volume:/var/www/wordpress
+    env_file:
+      - ./.env
 
   mariadb:
     image: mariadb
@@ -36,6 +38,8 @@ services:
       - inception_network
     volumes:
       - mariadb_volume:/var/lib/mysql
+    env_file:
+      - ./.env
 
 networks:
   inception_network:
