@@ -1,3 +1,5 @@
+include ./srcs/.env
+
 NAME = inception
 
 all: $(NAME)
