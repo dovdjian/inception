@@ -1,5 +1,3 @@
-include ./srcs/.env
-
 NAME = inception
 
 all: $(NAME)
@@ -13,4 +11,3 @@ clean:
 fclean: clean
 
 re:		fclean all
-
