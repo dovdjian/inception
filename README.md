@@ -15,7 +15,7 @@ docker-compose: https://docs.docker.com/compose/install/
 ```
 docker-compose -f ./srcs/docker-compose.yml up --build -d
 ```
-Connect to nginx server with installer wordpress in port 443:
+Now you can open your favourite browser and go to :
 - localhost:443 
 
 Fill installer infos and log in.
