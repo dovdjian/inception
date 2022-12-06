@@ -4,6 +4,24 @@ Introduction to Docker with the goal of containerizing a
 WordPress with a client, a NGINX server and a MariaDB
 database using docker-compose.
 
+## Installation
+
+docker: https://docs.docker.com/engine/install/ubuntu/
+
+docker-compose: https://docs.docker.com/compose/install/
+
+## Usage
+
+```
+make
+```
+Connect to nginx server with installer wordpress in port 443:
+- localhost:443 
+
+Fill installer infos and log in.
+
+That's it ! You have your own wordpress.
+
 ## Ressources:
 
 VM: https://virtual-machines.github.io/Xubuntu-VirtualBox/
